@@ -20,4 +20,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('health/', views.JsonView.as_view()),
+    path('proverka/', views.proverkaObnoviView.as_view()),
 ]
