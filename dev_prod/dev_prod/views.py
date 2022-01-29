@@ -10,6 +10,6 @@ class JsonView(APIView):
   parser_classes = (MultiPartParser, FormParser)
   def get(self, request, *args, **kwargs):
       response = {
-          "environment": Enviroment.env,
+          "APP_ENV": Enviroment.env,
       }
       return Response(response, status=status.HTTP_200_OK)
