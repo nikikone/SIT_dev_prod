@@ -22,7 +22,7 @@ class proverkaObnoviView(APIView):
 
     def get(self, request, *args, **kwargs):
         if Enviroment.env=='Production' or Enviroment.env=='Development':
-            text_response = 'Это сообщение выведется на' + Enviroment.env
+            text_response = 'Это сообщение выводится на ' + Enviroment.env
         else:
             text_response = 'Переменная окружения не задана'
         response = {
